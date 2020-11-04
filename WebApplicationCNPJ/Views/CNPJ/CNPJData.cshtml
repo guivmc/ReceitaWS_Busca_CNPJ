@@ -1,0 +1,43 @@
+﻿@model WebApplicationCNPJ.Models.CNPJData
+@{
+    ViewData["Title"] = "CNPJData";
+}
+
+<h1>Para o CNPJ @Model.CNPJCode eu encontrei: </h1>
+
+<div class="show_data">
+    <h3> Nome: @Model.Nome</h3>
+    <h3> Fantasia: @Model.Fantasia</h3>
+    <h3> Logradouro: @Model.Logradouro</h3>
+    <h3> Numero: @Model.Numero</h3>
+    <h3> Complemento: @Model.Complemento</h3>
+    <h3> Cep: @Model.Cep</h3>
+    <h3> Bairro: @Model.Bairro</h3>
+    <h3> Municipio: @Model.Municipio</h3>
+    <h3> UF: @Model.UF</h3>
+    <h3> Email: @Model.Email</h3>
+    <h3> Telefone: @Model.Telefone</h3>
+    <h3> EFR: @Model.EFR</h3>
+    <h3> Situacao: @Model.Situacao</h3>
+</div>
+<br/>
+<div class="form_save_data">
+    <form asp-action="SaveCNPJData" method="post">
+        <input type="hidden" name="Id" value="@(this.Model.Id)" ) />
+        <input type="hidden" name="CNPJCode" value="@(this.Model.CNPJCode)" ) />
+        <input type="hidden" name="Nome" value="@(this.Model.Nome)" ) />
+        <input type="hidden" name="Fantasia" value="@(this.Model.Fantasia)" ) />
+        <input type="hidden" name="Logradouro" value="@(this.Model.Logradouro)" ) />
+        <input type="hidden" name="Numero" value="@(this.Model.Numero)" ) />
+        <input type="hidden" name="Complemento" value="@(this.Model.Complemento)" ) />
+        <input type="hidden" name="Cep" value="@(this.Model.Cep)" ) />
+        <input type="hidden" name="Bairro" value="@(this.Model.Bairro)" ) />
+        <input type="hidden" name="Municipio" value="@(this.Model.Municipio)" ) />
+        <input type="hidden" name="UF" value="@(this.Model.UF)" ) />
+        <input type="hidden" name="Email" value="@(this.Model.Email)" ) />
+        <input type="hidden" name="Telefone" value="@(this.Model.Telefone)" ) />
+        <input type="hidden" name="EFR" value="@(this.Model.EFR)" ) />
+        <input type="hidden" name="Situacao" value="@(this.Model.Situacao)" ) />
+        <input type="submit" value="Save" />
+    </form>
+</div>

@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "CNPJ Finder";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <form asp-action="SearchCNPJ" method="post">
+        <input type="text" name="cnpjcode" placeholder="Insert CNPJ" pattern="\d{2}\.\d{3}\.\d{3}\/\d{4}\-\d{2}" minlength="18" maxlength="18" />
+        <input type="submit" value="Search" />
+    </form>
+
+    <h4>Example: 27.865.757/0001-02</h4>
+    <h4>07.739.346/0001-55</h4>
+    <h4>96.534.094/0001-58</h4>
+
+    <form asp-action="GetCNPJDataList" method="get">
+        <input type="submit" value="View List" />
+    </form>
+
+</div>
